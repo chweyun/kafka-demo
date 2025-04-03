@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: test-group
+
+crypto:
+  kafka:
+    topics:
+      coin-trades: coin-trades-topic
+    api: https://api.bithumb.com/v1/trades/ticks?currency={currency}&count=1
+
